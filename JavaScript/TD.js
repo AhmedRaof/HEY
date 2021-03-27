@@ -58,7 +58,8 @@ $(function () {
 });
 
 /***************************************************************/
-window.onscroll = function () {
+window.addEventListener("scroll",function() {
+
     'use strict';
 
     /*Start INFO*/
@@ -181,6 +182,6 @@ window.onscroll = function () {
             document.getElementById('col23').classList.remove('colorful');
             document.getElementById('col24').classList.remove('colorful');
     }
+});
 
-};
 /*End Test*/
