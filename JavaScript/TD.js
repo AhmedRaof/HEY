@@ -1,63 +1,6 @@
 /*jslint plusplus: true, evil: true*/
 /*global console, alert, prompt*/
 
-/*Start FAQ*/
-function slideInfo1() {
-    document.getElementById('faq1').classList.toggle('beforeInfo');
-    document.getElementById('faq1').classList.toggle('afterInfo');
-
-    document.getElementById('faq1.1').classList.toggle('beforeSlideing');
-    document.getElementById('faq1.1').classList.toggle('afterSlideing');
-}
-
-function slideInfo2() {
-    document.getElementById('faq2').classList.toggle('beforeInfo');
-    document.getElementById('faq2').classList.toggle('afterInfo');
-
-    document.getElementById('faq2.2').classList.toggle('beforeSlideing');
-    document.getElementById('faq2.2').classList.toggle('afterSlideing');
-}
-
-function slideInfo3() {
-    document.getElementById('faq3').classList.toggle('beforeInfo');
-    document.getElementById('faq3').classList.toggle('afterInfo');
-
-    document.getElementById('faq3.3').classList.toggle('beforeSlideing');
-    document.getElementById('faq3.3').classList.toggle('afterSlideing');
-}
-/*End FAQ*/
-
-/***************************************************************/ 
-$(function () {
-
-    (function autoSlider() {
-        $('.sliderQuote .active').each(function () {
-    
-            if (!$(this).is(':last-child')) {
-    
-                $(this).delay(3000).fadeOut(1000, function() {
-    
-                    $(this).removeClass('active').next().addClass('active').fadeIn();
-                    autoSlider();
-    
-                });
-    
-            } else {
-                $(this).delay(3000).fadeOut(1000, function() {
-                    
-                    $(this).removeClass('active');
-                    $('.sliderQuote div').eq(0).addClass('active').fadeIn();
-                    autoSlider();
-    
-                });
-            }
-        });
-    }());
-
-    
-});
-
-/***************************************************************/
 window.addEventListener("scroll",function() {
 
     'use strict';
@@ -185,3 +128,61 @@ window.addEventListener("scroll",function() {
 });
 
 /*End Test*/
+
+/*Start FAQ*/
+function slideInfo1() {
+    document.getElementById('faq1').classList.toggle('beforeInfo');
+    document.getElementById('faq1').classList.toggle('afterInfo');
+
+    document.getElementById('faq1.1').classList.toggle('beforeSlideing');
+    document.getElementById('faq1.1').classList.toggle('afterSlideing');
+}
+
+function slideInfo2() {
+    document.getElementById('faq2').classList.toggle('beforeInfo');
+    document.getElementById('faq2').classList.toggle('afterInfo');
+
+    document.getElementById('faq2.2').classList.toggle('beforeSlideing');
+    document.getElementById('faq2.2').classList.toggle('afterSlideing');
+}
+
+function slideInfo3() {
+    document.getElementById('faq3').classList.toggle('beforeInfo');
+    document.getElementById('faq3').classList.toggle('afterInfo');
+
+    document.getElementById('faq3.3').classList.toggle('beforeSlideing');
+    document.getElementById('faq3.3').classList.toggle('afterSlideing');
+}
+/*End FAQ*/
+
+/***************************************************************/ 
+$(function () {
+
+    (function autoSlider() {
+        $('.sliderQuote .active').each(function () {
+    
+            if (!$(this).is(':last-child')) {
+    
+                $(this).delay(3000).fadeOut(1000, function() {
+    
+                    $(this).removeClass('active').next().addClass('active').fadeIn();
+                    autoSlider();
+    
+                });
+    
+            } else {
+                $(this).delay(3000).fadeOut(1000, function() {
+                    
+                    $(this).removeClass('active');
+                    $('.sliderQuote div').eq(0).addClass('active').fadeIn();
+                    autoSlider();
+    
+                });
+            }
+        });
+    }());
+
+    
+});
+
+/***************************************************************/
